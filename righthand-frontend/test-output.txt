@@ -1,0 +1,224 @@
+﻿
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.7 [39m[90mD:/git_local/righthand/righthand-frontend[39m
+
+node.exe : AggregateError: 
+所在位置 行:1 字符: 47
++ ... d-frontend; & "C:\Program Files\nodejs\node.exe" "./node_modules/vite ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (AggregateError: :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    at internalConnectMultiple (node:net:1193:18)
+    at afterConnectMultiple (node:net:1783:7) {
+  code: 'ECONNREFUSED',
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:3000
+        at createConnectionError (node:net:1746:14)
+        at afterConnectMultiple (node:net:1776:16) {
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 3000
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:3000
+        at createConnectionError (node:net:1746:14)
+        at afterConnectMultiple (node:net:1776:16) {
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 3000
+    }
+  ]
+}
+[90mstderr[2m | tests/api/system.integration.test.ts[2m > [22m[2m绯荤粺绠＄悊API闆嗘垚娴嬭瘯
+[22m[39mResponse error: AxiosError: Failed to execute "fetch()" on "Window" with URL "http://localhost:3000/api/auth/login": 
+    at handleError [90m(file:///D:/git_local/righthand/righthand-frontend/[39mnode_modules/[4maxios[24m/lib/adapters/xhr.js
+:122:21[90m)[39m
+    at XMLHttpRequest.#callDispatchEventListeners [90m(file:///D:/git_local/righthand/righthand-frontend/[39mnode_modules/[4
+mhappy-dom[24m/lib/event/EventTarget.js:295:25[90m)[39m
+    at XMLHttpRequest.dispatchEvent [90m(file:///D:/git_local/righthand/righthand-frontend/[39mnode_modules/[4mhappy-dom[24
+m/lib/event/EventTarget.js:104:41[90m)[39m
+    at XMLHttpRequest.#goThroughDispatchEventPhases [90m(file:///D:/git_local/righthand/righthand-frontend/[39mnode_modules/
+[4mhappy-dom[24m/lib/event/EventTarget.js:164:38[90m)[39m
+    at XMLHttpRequest.dispatchEvent [90m(file:///D:/git_local/righthand/righthand-frontend/[39mnode_modules/[4mhappy-dom[24
+m/lib/event/EventTarget.js:100:47[90m)[39m
+    at XMLHttpRequest.#dispatchEvent [90m(file:///D:/git_local/righthand/righthand-frontend/[39mnode_modules/[4mhappy-dom[2
+4m/lib/xml-http-request/XMLHttpRequest.js:460:14[90m)[39m
+    at onError [90m(file:///D:/git_local/righthand/righthand-frontend/[39mnode_modules/[4mhappy-dom[24m/lib/xml-http-reques
+t/XMLHttpRequest.js:326:36[90m)[39m
+    at XMLHttpRequest.#sendAsync [90m(file:///D:/git_local/righthand/righthand-frontend/[39mnode_modules/[4mhappy-dom[24m/l
+ib/xml-http-request/XMLHttpRequest.js:342:13[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m {
+  isAxiosError: [33mtrue[39m,
+  code: [32m'ERR_NETWORK'[39m,
+  config: {
+    transitional: {
+      silentJSONParsing: [33mtrue[39m,
+      forcedJSONParsing: [33mtrue[39m,
+      clarifyTimeoutError: [33mfalse[39m,
+      legacyInterceptorReqResOrdering: [33mtrue[39m
+    },
+    adapter: [ [32m'xhr'[39m, [32m'http'[39m, [32m'fetch'[39m ],
+    transformRequest: [ [36m[Function: transformRequest][39m ],
+    transformResponse: [ [36m[Function: transformResponse][39m ],
+    timeout: [33m10000[39m,
+    xsrfCookieName: [32m'XSRF-TOKEN'[39m,
+    xsrfHeaderName: [32m'X-XSRF-TOKEN'[39m,
+    maxContentLength: [33m-1[39m,
+    maxBodyLength: [33m-1[39m,
+    env: { FormData: [36m[Function][39m, Blob: [36m[class Blob][39m },
+    validateStatus: [36m[Function: validateStatus][39m,
+    headers: Object [AxiosHeaders] {
+      Accept: [32m'application/json, text/plain, */*'[39m,
+      [32m'Content-Type'[39m: [32m'application/json'[39m
+    },
+    baseURL: [32m''[39m,
+    url: [32m'/api/auth/login'[39m,
+    method: [32m'post'[39m,
+    data: [32m'{"username":"admin","password":"admin123"}'[39m,
+    allowAbsoluteUrls: [33mtrue[39m,
+    signal: AbortSignal {
+      onabort: [1mnull[22m,
+      [32mSymbol(listeners)[39m: [36m[Object][39m,
+      [32mSymbol(listenerOptions)[39m: [36m[Object][39m,
+      [32mSymbol(aborted)[39m: [33mfalse[39m,
+      [32mSymbol(reason)[39m: [90mundefined[39m
+    }
+  },
+  request: XMLHttpRequest [EventTarget] {
+    upload: XMLHttpRequestUpload [EventTarget] {
+      [32mSymbol(listeners)[39m: [36m[Object][39m,
+      [32mSymbol(listenerOptions)[39m: [36m[Object][39m,
+      [32mSymbol(propertyEventListeners)[39m: Map(0) {}
+    },
+    withCredentials: [33mfalse[39m,
+    timeout: [33m10000[39m,
+    [32mSymbol(listeners)[39m: { capturing: Map(0) {}, bubbling: Map(0) {} },
+    [32mSymbol(listenerOptions)[39m: { capturing: Map(0) {}, bubbling: Map(0) {} },
+    [32mSymbol(propertyEventListeners)[39m: Map(4) {
+      [32m'onloadend'[39m => [36m[Function: onloadend][39m,
+      [32m'onabort'[39m => [36m[Function: handleAbort][39m,
+      [32m'onerror'[39m => [36m[Function: handleError][39m,
+      [32m'ontimeout'[39m => [36m[Function: handleTimeout][39m
+    }
+  },
+  event: ErrorEvent {
+    NONE: [33m0[39m,
+    CAPTURING_PHASE: [33m1[39m,
+    AT_TARGET: [33m2[39m,
+    BUBBLING_PHASE: [33m3[39m,
+    detail: [33m0[39m,
+    layerX: [33m0[39m,
+    layerY: [33m0[39m,
+    pageX: [33m0[39m,
+    pageY: [33m0[39m,
+    view: [1mnull[22m,
+    message: [32m'Failed to execute "fetch()" on "Window" with URL "http://localhost:3000/api/auth/login": '[39m,
+    filename: [32m''[39m,
+    lineno: [33m0[39m,
+    colno: [33m0[39m,
+    error: DOMException [NetworkError]: Failed to execute "fetch()" on "Window" with URL "http://localhost:3000/api/auth/login"
+: 
+        at Fetch.onError [90m(file:///D:/git_local/righthand/righthand-frontend/[39mnode_modules/[4mhappy-dom[24m/lib/fetch
+/Fetch.js:540:21[90m)[39m
+    [90m    at ClientRequest.emit (node:events:521:24)[39m
+    [90m    at emitErrorEvent (node:_http_client:109:11)[39m
+    [90m    at Socket.socketErrorListener (node:_http_client:593:5)[39m
+    [90m    at Socket.emit (node:events:509:28)[39m
+    [90m    at emitErrorNT (node:internal/streams/destroy:170:8)[39m
+    [90m    at emitErrorCloseNT (node:internal/streams/destroy:129:3)[39m
+    [90m    at processTicksAndRejections (node:internal/process/task_queues:90:21)[39m,
+    [32mSymbol(composed)[39m: [33mfalse[39m,
+    [32mSymbol(bubbles)[39m: [33mfalse[39m,
+    [32mSymbol(cancelable)[39m: [33mfalse[39m,
+    [32mSymbol(defaultPrevented)[39m: [33mfalse[39m,
+    [32mSymbol(eventPhase)[39m: [33m0[39m,
+    [32mSymbol(timeStamp)[39m: [33m6311.2991[39m,
+    [32mSymbol(type)[39m: [32m'error'[39m,
+    [32mSymbol(dispatching)[39m: [33mfalse[39m,
+    [32mSymbol(immediatePropagationStopped)[39m: [33mfalse[39m,
+    [32mSymbol(propagationStopped)[39m: [33mfalse[39m,
+    [32mSymbol(target)[39m: XMLHttpRequest [EventTarget] {
+      upload: [36m[XMLHttpRequestUpload [EventTarget]][39m,
+      withCredentials: [33mfalse[39m,
+      timeout: [33m10000[39m,
+      [32mSymbol(listeners)[39m: [36m[Object][39m,
+      [32mSymbol(listenerOptions)[39m: [36m[Object][39m,
+      [32mSymbol(propertyEventListeners)[39m: [36m[Map][39m
+    },
+    [32mSymbol(currentTarget)[39m: [1mnull[22m,
+    [32mSymbol(isInPassiveEventListener)[39m: [33mfalse[39m
+  }
+}
+
+AggregateError: 
+    at internalConnectMultiple (node:net:1193:18)
+    at afterConnectMultiple (node:net:1783:7) {
+  code: 'ECONNREFUSED',
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:3000
+        at createConnectionError (node:net:1746:14)
+        at afterConnectMultiple (node:net:1776:16) {
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 3000
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:3000
+        at createConnectionError (node:net:1746:14)
+        at afterConnectMultiple (node:net:1776:16) {
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 3000
+    }
+  ]
+}
+ [2m[90m鈫?[39m[22m tests/api/system.integration.test.ts[2m > [22m绯荤粺绠＄悊API闆嗘垚娴嬭瘯[2m > [22m鐢ㄦ埛绠＄悊API[2m > [22m搴旇姝ｇ‘杩斿洖鍒嗛〉鏁版嵁鏍煎紡
+ [2m[90m鈫?[39m[22m tests/api/system.integration.test.ts[2m > [22m绯荤粺绠＄悊API闆嗘垚娴嬭瘯[2m > [22m鐢ㄦ埛绠＄悊API[2m > [22m搴旇姝ｇ‘澶勭悊绌烘煡璇㈠弬鏁? [2m[90m鈫?[39m[22m tests/api/system.integration.test.ts[2m > [22m绯荤粺绠＄悊API闆嗘垚娴嬭瘯[2m > [22m瑙掕壊绠＄悊API[2m > [22m搴旇姝ｇ‘杩斿洖鎵€鏈夎鑹插垪琛? [2m[90m鈫?[39m[22m tests/api/system.integration.test.ts[2m > [22m绯荤粺绠＄悊API闆嗘垚娴嬭瘯[2m > [22m瑙掕壊绠＄悊API[2m > [22m搴旇姝ｇ‘杩斿洖鍒嗛〉瑙掕壊鍒楄〃
+ [2m[90m鈫?[39m[22m tests/api/system.integration.test.ts[2m > [22m绯荤粺绠＄悊API闆嗘垚娴嬭瘯[2m > [22m鑿滃崟绠＄悊API[2m > [22m搴旇姝ｇ‘杩斿洖鑿滃崟鏍? [2m[90m鈫?[39m[22m tests/api/system.integration.test.ts[2m > [22m绯荤粺绠＄悊API闆嗘垚娴嬭瘯[2m > [22m瀛楀吀绠＄悊API[2m > [22m搴旇姝ｇ‘杩斿洖瀛楀吀鍒楄〃
+
+[31m鈳幆鈳幆鈳幆[39m[1m[41m Failed Suites 1 [49m[22m[31m鈳幆鈳幆鈳幆鈳?[39m
+
+[41m[1m FAIL [22m[49m tests/api/system.integration.test.ts[2m > [22m绯荤粺绠＄悊API闆嗘垚娴嬭瘯
+[31m[1mAxiosError[22m: Failed to execute "fetch()" on "Window" with URL "http://localhost:3000/api/auth/login": [39m
+[90m [2m鉂?[22m handleError node_modules/axios/lib/adapters/xhr.js:[2m122:21[22m[39m
+[90m [2m鉂?[22m XMLHttpRequest.#callDispatchEventListeners node_modules/happy-dom/src/event/EventTarget.ts:[2m368:6[22m[39m
+[90m [2m鉂?[22m XMLHttpRequest.dispatchEvent node_modules/happy-dom/src/event/EventTarget.ts:[2m142:35[22m[39m
+[90m [2m鉂?[22m XMLHttpRequest.#goThroughDispatchEventPhases node_modules/happy-dom/src/event/EventTarget.ts:[2m214:32[22m[
+39m
+[90m [2m鉂?[22m XMLHttpRequest.dispatchEvent node_modules/happy-dom/src/event/EventTarget.ts:[2m135:38[22m[39m
+[90m [2m鉂?[22m XMLHttpRequest.#dispatchEvent node_modules/happy-dom/src/xml-http-request/XMLHttpRequest.ts:[2m574:7[22m[39
+m
+[90m [2m鉂?[22m onError node_modules/happy-dom/src/xml-http-request/XMLHttpRequest.ts:[2m417:24[22m[39m
+[90m [2m鉂?[22m XMLHttpRequest.#sendAsync node_modules/happy-dom/src/xml-http-request/XMLHttpRequest.ts:[2m434:3[22m[39m
+[90m [2m鉂?[22m Axios.request node_modules/axios/lib/core/Axios.js:[2m46:41[22m[39m
+[36m [2m鉂?[22m tests/api/system.integration.test.ts:[2m10:22[22m[39m
+    [90m  8|[39m   [34mbeforeAll[39m([35masync[39m () [33m=>[39m {
+    [90m  9|[39m     [90m// 鐧诲綍鑾峰彇token[39m
+    [90m 10|[39m     [35mconst[39m loginRes [33m=[39m [35mawait[39m [34mrequest[39m({
+    [90m   |[39m                      [31m^[39m
+    [90m 11|[39m       url[33m:[39m [32m'/api/auth/login'[39m[33m,[39m
+    [90m 12|[39m       method[33m:[39m [32m'post'[39m[33m,[39m
+
+[31m[2m鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ description: undefined, number: undefined, config: { transitional: { silentJSONPars
+ing: true, forcedJSONParsing: true, clarifyTimeoutError: false, legacyInterceptorReqResOrdering: true }, adapter: [ 'xhr', 'htt
+p', 'fetch' ], transformRequest: [ 'Function<transformRequest>' ], transformResponse: [ 'Function<transformResponse>' ], timeou
+t: 10000, xsrfCookieName: 'XSRF-TOKEN', xsrfHeaderName: 'X-XSRF-TOKEN', maxContentLength: -1, maxBodyLength: -1, env: { FormDat
+a: 'Function<FormData>', Blob: 'Function<Blob>' }, validateStatus: 'Function<validateStatus>', headers: { Accept: 'application/
+json, text/plain, */*', 'Content-Type': 'application/json' }, baseURL: '', url: '/api/auth/login', method: 'post', data: '{"use
+rname":"admin","password":"admin123"}', allowAbsoluteUrls: true, signal: { onabort: null } }, code: 'ERR_NETWORK', status: unde
+fined }[39m
+[31m[2m鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆鈳幆[1/1]鈳?[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [33m6 skipped[39m[90m (6)[39m
+[2m   Start at [22m 17:32:38
+[2m   Duration [22m 6.49s[2m (transform 197ms, setup 198ms, import 4.53s, tests 91ms, environment 1.25s)[22m
+

@@ -1,0 +1,37 @@
+services:
+  righthand-go:
+    build:
+      context: .
+      dockerfile: righthand-go/Dockerfile
+    container_name: righthand-go
+    ports:
+      - "8090:9080"
+    environment:
+      - DATABASE_HOST=${DATABASE_HOST:-172.17.0.1}
+      - DATABASE_PORT=${DATABASE_PORT:-3306}
+      - DATABASE_USERNAME=${DATABASE_USERNAME:-root}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD:-password}
+      - DATABASE_DBNAME=${DATABASE_DBNAME:-righthand_db}
+      - DATABASE_LOC=${DATABASE_LOC:-Asia/Shanghai}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - righthand-network
+    restart: unless-stopped
+
+  righthand-frontend:
+    build:
+      context: ./righthand-frontend
+      dockerfile: Dockerfile
+    container_name: righthand-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - righthand-go
+    networks:
+      - righthand-network
+    restart: unless-stopped
+
+networks:
+  righthand-network:
+    driver: bridge

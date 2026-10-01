@@ -1,0 +1,34 @@
+services:
+  righthand-go:
+    build:
+      context: .
+      dockerfile: righthand-go/Dockerfile
+    container_name: righthand-go
+    ports:
+      - "8090:9080"
+    environment:
+      - DB_HOST=host.docker.internal
+      - DB_PORT=3306
+      - DB_NAME=righthand_db
+      - DB_USER=root
+      - DB_PASSWORD=password
+    networks:
+      - righthand-network
+    restart: unless-stopped
+
+  righthand-frontend:
+    build:
+      context: ./righthand-frontend
+      dockerfile: Dockerfile
+    container_name: righthand-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - righthand-go
+    networks:
+      - righthand-network
+    restart: unless-stopped
+
+networks:
+  righthand-network:
+    driver: bridge

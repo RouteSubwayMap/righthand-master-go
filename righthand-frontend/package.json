@@ -1,0 +1,39 @@
+{
+  "name": "righthand-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "左右手管家系统 - 前端应用",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@tinymce/tinymce-vue": "^6.3.0",
+    "axios": "^1.6.2",
+    "dayjs": "^1.11.10",
+    "echarts": "^5.4.3",
+    "element-plus": "^2.4.3",
+    "exceljs": "^4.4.0",
+    "pinia": "^2.1.7",
+    "tinymce": "^8.3.2",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5",
+    "web-vitals": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@vitejs/plugin-vue": "^4.5.0",
+    "@vue/test-utils": "^2.5.1",
+    "happy-dom": "^20.14.5",
+    "sass-embedded": "^1.99.0",
+    "vite": "^5.0.0",
+    "vitest": "^4.1.7",
+    "xlsx": "^0.18.5"
+  }
+}

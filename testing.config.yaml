@@ -1,0 +1,27 @@
+# testing.config.yaml - 由测试标准技能自动探测生成（2026-09-21），人工修正为本仓库 monorepo 实际结构
+# 字段含义见 skills/testing-standards/references/project-config-contract.md
+# 说明：Go 模块根在 righthand-go/（命令用 -C righthand-go 从仓库根直达）；前端在 righthand-frontend/
+project: righthand
+language: go
+test:
+  scoped_cmd: "go test -C righthand-go {pkgs}"
+  full_cmd: "go test -C righthand-go ./..."
+  build_cmd: "go build -C righthand-go ./..."
+  integration_cmd: ""
+  integration_tag: ""
+  matrix_dir: "tests/cases"
+frontend:
+  enabled: true
+  dir: "righthand-frontend"
+  scoped_cmd: "npx vitest related {files}"
+  build_cmd: "npm run build"
+db:
+  required: true
+  engine: mysql
+  version: "8.0"
+  dsn_env: "TEST_DB_DSN"
+  compose_file: "docker-compose.yml"
+  schema_ssot: "righthand-go/sql/init-database.sql"
+  forbid_fallback: true
+policy:
+  allow_full_test: ["ci", "explicit"]
